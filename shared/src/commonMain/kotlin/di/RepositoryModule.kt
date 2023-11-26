@@ -1,4 +1,4 @@
-package all.di
+package di
 
 import all.domain.repository.AuthRepository
 import all.domain.repository.impl.AuthRepositoryImpl

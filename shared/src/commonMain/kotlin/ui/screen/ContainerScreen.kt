@@ -1,6 +1,5 @@
 package ui.screen
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
@@ -11,14 +10,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.tab.CurrentTab
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabNavigator
-import ui.theme.text_color
-import uz.uzbekcard.taxiapp.util.AppScreen
+import util.AppScreen
 
 class ContainerScreen : AppScreen {
     @Composable
@@ -26,7 +23,6 @@ class ContainerScreen : AppScreen {
         ContainerContent()
     }
 
-    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     @Composable
     fun ContainerContent() {
         TabNavigator(PassengerMapScreen()) {
@@ -61,10 +57,5 @@ class ContainerScreen : AppScreen {
             selected = selected,
             onClick = { tabNavigator.current = tab }
         )
-    }
-    @Preview
-    @Composable
-    fun ContainerPreview() {
-        ContainerContent()
     }
 }

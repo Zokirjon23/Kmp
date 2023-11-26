@@ -1,4 +1,4 @@
-package all.di
+package di
 
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.bind

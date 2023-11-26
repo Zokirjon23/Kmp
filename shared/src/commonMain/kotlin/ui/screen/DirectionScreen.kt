@@ -21,17 +21,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
-import androidx.compose.ui.res.vectorResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
-import uz.uzbekcard.taxiapp.R
 import uz.uzbekcard.taxiapp.presenter.DirectionPresenter
 import uz.uzbekcard.taxiapp.presenter.impl.DirectionPresenterImpl
 import ui.intent.DirectionIntent
-import ui.theme.color_primary
 import ui.uistate.DirectionUiState
 import uz.uzbekcard.taxiapp.util.component.BoxApp
 import uz.uzbekcard.taxiapp.util.component.IconApp
@@ -111,13 +107,5 @@ class DirectionScreen : Tab {
                 }
             }
         }
-    }
-
-    @Preview(showSystemUi = true)
-    @Composable
-    fun DirectionPreview() {
-        DirectionContent(remember {
-            mutableStateOf(DirectionUiState())
-        }) {}
     }
 }

@@ -1,25 +1,14 @@
-package all.di
+package di
 
-import android.util.Log
-import all.source.local.Storage
-import io.ktor.client.HttpClient
-import io.ktor.client.engine.android.Android
-import io.ktor.client.plugins.HttpResponseValidator
-import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
-import io.ktor.client.plugins.defaultRequest
-import io.ktor.client.plugins.logging.LogLevel
-import io.ktor.client.plugins.logging.Logging
-import io.ktor.client.request.header
-import io.ktor.serialization.kotlinx.json.json
+import org.jetbrains.skiko.OS
 import org.koin.dsl.module
-import uz.uzbekcard.taxiapp.BuildConfig
 
 val networkModule = module {
     single { provideClient(get()) }
 }
 
 private fun provideClient(storage : Storage) : HttpClient{
-    return HttpClient(Android){
+    return HttpClient(OS.Android){
         install(ContentNegotiation) {
             json()
         }

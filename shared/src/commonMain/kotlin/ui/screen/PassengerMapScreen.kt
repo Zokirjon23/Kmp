@@ -7,12 +7,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
-import androidx.compose.ui.res.vectorResource
-import androidx.compose.ui.tooling.preview.Preview
 import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
-import uz.uzbekcard.taxiapp.R
 import uz.uzbekcard.taxiapp.presenter.PassengerMapPresenter
 import uz.uzbekcard.taxiapp.presenter.impl.PassengerMapPresenterImpl
 import ui.intent.PassagerMapIntent
@@ -66,13 +63,5 @@ class PassengerMapScreen : Tab {
 //                )
 //            }
 //        }
-    }
-
-    @Preview
-    @Composable
-    fun MapPreview() {
-        PassengerMapContent(remember {
-            mutableStateOf(PassagerMapUiState())
-        }){}
     }
 }

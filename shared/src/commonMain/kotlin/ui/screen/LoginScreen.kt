@@ -28,20 +28,14 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.koin.getScreenModel
-import uz.uzbekcard.taxiapp.R
 import uz.uzbekcard.taxiapp.presenter.LoginViewModel
 import uz.uzbekcard.taxiapp.presenter.impl.LoginViewModelImpl
 import ui.intent.LoginIntent
-import ui.theme.poppins_medium
-import ui.theme.color_primary
-import ui.theme.text_color
 import ui.uistate.LoginUiState
-import uz.uzbekcard.taxiapp.util.AppScreen
-import uz.uzbekcard.taxiapp.util.ToastError
+import util.AppScreen
 import uz.uzbekcard.taxiapp.util.component.TextFieldPhoneApp
 import uz.uzbekcard.taxiapp.util.component.BoxApp
 import uz.uzbekcard.taxiapp.util.component.ColumnApp
@@ -166,11 +160,5 @@ class LoginScreen : AppScreen {
                 ToastError(text = it.massageToText()) { intent(LoginIntent.DismissError) }
             }
         }
-    }
-
-    @Preview(showSystemUi = true)
-    @Composable
-    fun LoginPreview() {
-        LoginContent(remember{ mutableStateOf(LoginUiState()) }) {}
     }
 }

@@ -27,23 +27,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
-import coil.compose.rememberAsyncImagePainter
-import coil.request.ImageRequest
-import uz.uzbekcard.taxiapp.R
+import org.jetbrains.compose.resources.painterResource
 import uz.uzbekcard.taxiapp.presenter.ChatUserPresenter
 import uz.uzbekcard.taxiapp.presenter.impl.ChatUserPresenterImpl
 import ui.intent.ChatUserIntent
-import ui.theme.color_primary
 import ui.uistate.ChatUserUiState
 import uz.uzbekcard.taxiapp.util.component.BoxApp
 import uz.uzbekcard.taxiapp.util.component.TextApp
@@ -232,14 +225,5 @@ class ChatUserScreen : Tab {
                 }
             }
         }
-    }
-
-
-    @Preview(showSystemUi = true)
-    @Composable
-    fun ChatUserPreview() {
-        ChatUserScreenContent(uiState = remember {
-            mutableStateOf(ChatUserUiState())
-        }) {}
     }
 }
