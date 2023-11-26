@@ -45,8 +45,8 @@ import uz.uzbekcard.taxiapp.presenter.impl.ChatUserPresenterImpl
 import ui.intent.ChatUserIntent
 import ui.theme.color_primary
 import ui.uistate.ChatUserUiState
-import uz.uzbekcard.taxiapp.util.component.BoxApp
-import uz.uzbekcard.taxiapp.util.component.TextApp
+import util.component.BoxApp
+import util.component.TextApp
 
 class ChatUserScreen : Tab {
 

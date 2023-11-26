@@ -1,4 +1,4 @@
-package uz.uzbekcard.taxiapp.util.component
+package util.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -15,8 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import uz.uzbekcard.taxiapp.R
-import ui.theme.color_primary
+import util.color_primary
 
 @Composable
 fun AuthButton(modifier: Modifier = Modifier,onClick : () -> Unit,text : String,loadingState : Boolean) {
@@ -40,7 +39,7 @@ fun AuthButton(modifier: Modifier = Modifier,onClick : () -> Unit,text : String,
                 modifier = Modifier.align(Alignment.Center), fontSize = 16.sp
             )
             IconApp(
-                R.drawable.ic_arrow_left,
+                0,
                 tint = Color.White,
                 modifier = Modifier
                     .align(Alignment.CenterEnd)

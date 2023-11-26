@@ -1,6 +1,6 @@
-package uz.uzbekcard.taxiapp.util.direction.impl
+package util.direction.impl
 
-import uz.uzbekcard.taxiapp.util.direction.MapDirection
+import util.direction.MapDirection
 
 class MapDirectionImpl : MapDirection {
 }

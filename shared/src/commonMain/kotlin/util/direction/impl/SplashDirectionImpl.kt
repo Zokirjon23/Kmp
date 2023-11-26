@@ -1,10 +1,11 @@
-package uz.uzbekcard.taxiapp.util.direction.impl
+package util.direction.impl
 
 import ui.screen.LoginScreen
-import uz.uzbekcard.taxiapp.util.direction.SplashDirection
+import util.direction.SplashDirection
+import util.navigation.Navigator
 import uz.uzbekcard.taxiapp.util.navigation.Navigation
 
-class SplashDirectionImpl constructor(private val navigation : Navigation) : SplashDirection {
+class SplashDirectionImpl constructor(private val navigation : Navigator) : SplashDirection {
    override suspend fun openRegistrationScreen(){
        navigation.navigateTo(LoginScreen())
    }

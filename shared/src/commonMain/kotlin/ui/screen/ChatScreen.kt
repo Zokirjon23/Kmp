@@ -42,10 +42,10 @@ import ui.intent.ChatIntent
 import ui.theme.color_primary
 import ui.uistate.ChatUiState
 import uz.uzbekcard.taxiapp.util.AppScreen
-import uz.uzbekcard.taxiapp.util.component.AppBasicTextField
-import uz.uzbekcard.taxiapp.util.component.BoxApp
-import uz.uzbekcard.taxiapp.util.component.IconApp
-import uz.uzbekcard.taxiapp.util.component.TextApp
+import util.component.AppBasicTextField
+import util.component.BoxApp
+import util.component.IconApp
+import util.component.TextApp
 
 class ChatScreen : AppScreen {
 

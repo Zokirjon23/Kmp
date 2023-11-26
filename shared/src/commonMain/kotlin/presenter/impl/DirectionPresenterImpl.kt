@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import uz.uzbekcard.taxiapp.presenter.DirectionPresenter
 import ui.intent.DirectionIntent
 import ui.uistate.DirectionUiState
-import uz.uzbekcard.taxiapp.util.direction.DriftDirection
+import util.direction.DriftDirection
 
 class DirectionPresenterImpl(
     private val direction: DriftDirection,

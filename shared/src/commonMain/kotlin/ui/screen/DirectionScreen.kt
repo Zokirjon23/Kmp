@@ -33,10 +33,10 @@ import uz.uzbekcard.taxiapp.presenter.impl.DirectionPresenterImpl
 import ui.intent.DirectionIntent
 import ui.theme.color_primary
 import ui.uistate.DirectionUiState
-import uz.uzbekcard.taxiapp.util.component.BoxApp
-import uz.uzbekcard.taxiapp.util.component.IconApp
-import uz.uzbekcard.taxiapp.util.component.SpinnerApp
-import uz.uzbekcard.taxiapp.util.component.TextApp
+import util.component.BoxApp
+import util.component.IconApp
+import util.component.SpinnerApp
+import util.component.TextApp
 import util.component.ToolbarApp
 
 class DirectionScreen : Tab {

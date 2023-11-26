@@ -1,4 +1,4 @@
-package uz.uzbekcard.taxiapp.util.component
+package util.component
 
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.Text
@@ -15,8 +15,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
-import uz.uzbekcard.taxiapp.R
-import ui.theme.text_color
+import util.text_color
 
 @Composable
 fun TextApp(
@@ -26,7 +25,7 @@ fun TextApp(
     fontSize: TextUnit = TextUnit.Unspecified,
     fontStyle: FontStyle? = null,
     fontWeight: FontWeight? = null,
-    fontFamily: FontFamily? = FontFamily(Font(R.font.poppins_medium)),
+    fontFamily: FontFamily? = null,
     letterSpacing: TextUnit = TextUnit.Unspecified,
     textDecoration: TextDecoration? = null,
     textAlign: TextAlign? = null,

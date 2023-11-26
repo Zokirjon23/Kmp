@@ -1,4 +1,4 @@
-package uz.uzbekcard.taxiapp.util.direction
+package util.direction
 
 interface ChatDirection {
 }

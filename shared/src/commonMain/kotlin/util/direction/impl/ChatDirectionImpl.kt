@@ -1,6 +1,6 @@
-package uz.uzbekcard.taxiapp.util.direction.impl
+package util.direction.impl
 
-import uz.uzbekcard.taxiapp.util.direction.ChatDirection
+import util.direction.ChatDirection
 
 class ChatDirectionImpl : ChatDirection {
 }

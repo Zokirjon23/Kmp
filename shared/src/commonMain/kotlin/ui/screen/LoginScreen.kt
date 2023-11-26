@@ -42,11 +42,11 @@ import ui.theme.text_color
 import ui.uistate.LoginUiState
 import uz.uzbekcard.taxiapp.util.AppScreen
 import uz.uzbekcard.taxiapp.util.ToastError
-import uz.uzbekcard.taxiapp.util.component.TextFieldPhoneApp
-import uz.uzbekcard.taxiapp.util.component.BoxApp
+import util.component.TextFieldPhoneApp
+import util.component.BoxApp
 import uz.uzbekcard.taxiapp.util.component.ColumnApp
-import uz.uzbekcard.taxiapp.util.component.IconApp
-import uz.uzbekcard.taxiapp.util.component.TextApp
+import util.component.IconApp
+import util.component.TextApp
 import util.component.ToolbarApp
 import uz.uzbekcard.taxiapp.util.extension.massageToText
 

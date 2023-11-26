@@ -1,4 +1,4 @@
-package uz.uzbekcard.taxiapp.util.component
+package util.component
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,7 +10,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -22,8 +21,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -33,7 +30,6 @@ import androidx.compose.ui.text.input.OffsetMapping
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TransformedText
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.animation.animateColorAsState
@@ -51,10 +47,11 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.TextFieldValue
-import uz.uzbekcard.taxiapp.R
-import ui.theme.color_primary
-import ui.theme.color_secondary
-import ui.theme.text_color
+import org.jetbrains.compose.resources.ExperimentalResourceApi
+import org.jetbrains.compose.resources.painterResource
+import util.color_primary
+import util.color_secondary
+import util.text_color
 
 
 @Composable
@@ -167,9 +164,7 @@ fun TextFieldPhoneApp(
             .height(60.dp),
         placeholder = {
             Text(
-                text = stringResource(
-                    id = R.string.enter_phone_number
-                ), color = text_color.copy(0.5f)
+                text = "Enter phone number", color = text_color.copy(0.5f)
             )
         }
     )
@@ -226,11 +221,12 @@ private class PhoneOffsetMapper(val mask: String, val numberChar: Char) : Offset
         offset - mask.take(offset).count { it != numberChar }
 }
 
+@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun TextFieldPasswordApp(
     modifier: Modifier = Modifier,
     state: MutableState<String>,
-    hint: String = stringResource(R.string.password),
+    hint: String = "Passwoord",
     isError: State<String> = remember {
         mutableStateOf("")
     },
@@ -254,8 +250,8 @@ fun TextFieldPasswordApp(
             ),
             trailingIcon = {
                 val image = if (passwordVisible)
-                    painterResource(id = R.drawable.ic_password_showon)
-                else painterResource(id = R.drawable.ic_password_hide)
+                    painterResource("")
+                else painterResource("")
 
                 val description = if (passwordVisible) "Hide password" else "Show password"
 
@@ -380,18 +376,3 @@ fun AppBasicTextField(modifier: Modifier = Modifier,placeholder: String = "",val
         }
     )
 }
-
-
-@Preview
-@Composable
-fun TextFPreview() {
-    Surface(color = Color.White) {
-//        TextFieldApp(modifier = Modifier, state = remember {
-//            mutableStateOf("")
-//        }, hint = "login")
-//        TextFieldPasswordApp(state = remember {
-//            mutableStateOf("")
-//        })
-    }
-}
-

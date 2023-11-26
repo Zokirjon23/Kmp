@@ -8,7 +8,7 @@ import all.domain.usecase.ChatUserUsesCase
 import uz.uzbekcard.taxiapp.presenter.ChatUserPresenter
 import ui.intent.ChatUserIntent
 import ui.uistate.ChatUserUiState
-import uz.uzbekcard.taxiapp.util.direction.ChatUserDirection
+import util.direction.ChatUserDirection
 
 class ChatUserPresenterImpl(
     private val direction: ChatUserDirection,

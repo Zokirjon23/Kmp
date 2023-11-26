@@ -21,10 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import uz.uzbekcard.taxiapp.R
-import ui.theme.color_primary
-import uz.uzbekcard.taxiapp.util.component.IconApp
-import uz.uzbekcard.taxiapp.util.component.TextApp
+import util.color_primary
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -62,7 +59,7 @@ fun CustomAppBar(modifier: Modifier = Modifier,title: String, navigationIcon: ()
             onClick = { navigationIcon() },
             Modifier.padding(start = 2.dp, end = 5.dp)
         ) {
-            IconApp(id = R.drawable.ic_back, tint = Color.White)
+//            IconApp(id = R.drawable.ic_back, tint = Color.White)
         }
         TextApp(
             text = title,

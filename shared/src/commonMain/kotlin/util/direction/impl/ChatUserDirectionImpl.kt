@@ -1,10 +1,10 @@
-package uz.uzbekcard.taxiapp.util.direction.impl
+package util.direction.impl
 
 import ui.screen.ChatScreen
-import uz.uzbekcard.taxiapp.util.direction.ChatUserDirection
-import uz.uzbekcard.taxiapp.util.navigation.Navigation
+import util.direction.ChatUserDirection
+import util.navigation.Navigator
 
-class ChatUserDirectionImpl(private val navigation: Navigation) : ChatUserDirection {
+class ChatUserDirectionImpl(private val navigation: Navigator) : ChatUserDirection {
     override suspend fun openChat() {
         navigation.navigateTo(ChatScreen())
     }

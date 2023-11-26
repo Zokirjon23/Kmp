@@ -6,7 +6,7 @@ import all.domain.usecase.ChatUsesCase
 import uz.uzbekcard.taxiapp.presenter.ChatPresenter
 import ui.intent.ChatIntent
 import ui.uistate.ChatUiState
-import uz.uzbekcard.taxiapp.util.direction.ChatDirection
+import util.direction.ChatDirection
 
 class ChatPresenterImpl(private val direction: ChatDirection, private val usesCase: ChatUsesCase) :
     ScreenModel, ChatPresenter {

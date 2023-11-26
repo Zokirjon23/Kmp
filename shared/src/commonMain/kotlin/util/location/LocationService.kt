@@ -1,6 +1,5 @@
-package uz.uzbekcard.taxiapp.util.location
+package util.location
 
 interface LocationService {
-
     fun requestLocationUpdates(): Any
 }
