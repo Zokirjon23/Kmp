@@ -21,18 +21,38 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                api(compose.foundation)
+                api(compose.animation)
+                implementation(compose.ui)
                 implementation(compose.runtime)
-                implementation(compose.foundation)
                 implementation(compose.material)
+                implementation(compose.material3)
+                implementation(compose.materialIconsExtended)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+
+                implementation(libs.voyager.navigator)
+                implementation(libs.voyager.tab.navigator)
+                implementation(libs.voyager.transitions)
+                implementation(libs.voyager.androidx)
+                implementation(libs.voyager.koin)
+
+                implementation(libs.kotlinx.dateTime)
+                implementation(libs.koin.core)
+                implementation(libs.koin.compose)
+
+                api(libs.mvvm.core)
+                api(libs.mvvm.compose)
+                api(libs.mvvm.flow)
+                api(libs.mvvm.flow.compose)
+                api(libs.precompose)
             }
         }
         val androidMain by getting {
             dependencies {
-                api("androidx.activity:activity-compose:1.7.2")
-                api("androidx.appcompat:appcompat:1.6.1")
-                api("androidx.core:core-ktx:1.10.1")
+                api(libs.compose.activity)
+                api(libs.androidx.appcompat)
+                api(libs.androidx.core)
             }
         }
         val iosX64Main by getting
@@ -44,6 +64,12 @@ kotlin {
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
         }
+
+//        val desktopMain by getting {
+//            dependencies {
+//                api(compose.preview)
+//            }
+//        }
     }
 }
 

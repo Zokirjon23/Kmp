@@ -10,6 +10,8 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(project(":shared"))
+                implementation(libs.koin.android)
+                implementation(libs.koin.compose)
             }
         }
     }
@@ -35,4 +37,7 @@ android {
     kotlin {
         jvmToolchain(17)
     }
+}
+dependencies {
+
 }
