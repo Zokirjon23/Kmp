@@ -6,7 +6,7 @@ import cafe.adriel.voyager.transitions.SlideTransition
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onEach
 import org.koin.compose.koinInject
-import ui.SplashScreen
+import ui.screen.SplashScreen
 import util.navigation.NavigatorDispatcher
 
 @Composable
@@ -24,4 +24,3 @@ fun Application() {
     }
 }
 
-expect fun getPlatformName(): String
