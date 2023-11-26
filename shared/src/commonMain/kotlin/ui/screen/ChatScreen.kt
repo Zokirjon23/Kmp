@@ -1,5 +1,6 @@
 package ui.screen
 
+import all.presenter.impl.ChatPresenterImpl
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -24,28 +25,21 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.koin.getScreenModel
-import coil.compose.rememberAsyncImagePainter
-import coil.request.ImageRequest
-import uz.uzbekcard.taxiapp.R
+import org.jetbrains.compose.resources.painterResource
 import uz.uzbekcard.taxiapp.presenter.ChatPresenter
-import uz.uzbekcard.taxiapp.presenter.impl.ChatPresenterImpl
 import ui.intent.ChatIntent
-import ui.theme.color_primary
 import ui.uistate.ChatUiState
-import uz.uzbekcard.taxiapp.util.AppScreen
-import util.component.AppBasicTextField
-import util.component.BoxApp
-import util.component.IconApp
-import util.component.TextApp
+import util.AppScreen
+import uz.uzbekcard.taxiapp.util.component.AppBasicTextField
+import uz.uzbekcard.taxiapp.util.component.BoxApp
+import uz.uzbekcard.taxiapp.util.component.IconApp
+import uz.uzbekcard.taxiapp.util.component.TextApp
 
 class ChatScreen : AppScreen {
 
@@ -155,13 +149,5 @@ class ChatScreen : AppScreen {
                 }
             }
         }
-    }
-
-    @Preview(showSystemUi = true)
-    @Composable
-    fun ChatScreenPreview() {
-        ChatScreenContent(uiState = remember {
-            mutableStateOf(ChatUiState())
-        }) {}
     }
 }

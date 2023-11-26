@@ -12,12 +12,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import util.AppScreen
-import util.component.AuthButton
-import util.component.BoxApp
-import util.component.ColumnApp
-import util.component.RegistrationCodeInput
-import util.component.TextApp
 import util.component.ToolbarApp
+import uz.uzbekcard.taxiapp.util.component.AuthButton
+import uz.uzbekcard.taxiapp.util.component.BoxApp
+import uz.uzbekcard.taxiapp.util.component.ColumnApp
+import uz.uzbekcard.taxiapp.util.component.RegistrationCodeInput
+import uz.uzbekcard.taxiapp.util.component.TextApp
 
 class SmsVerificationScreen : AppScreen {
     @Composable
@@ -64,11 +64,5 @@ class SmsVerificationScreen : AppScreen {
                 )
             }
         }
-    }
-
-    @Preview(showSystemUi = true)
-    @Composable
-    fun SmsVerificationPreview() {
-        SmsVerificationContent()
     }
 }
