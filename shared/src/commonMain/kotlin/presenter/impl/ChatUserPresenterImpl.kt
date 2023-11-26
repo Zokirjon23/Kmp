@@ -1,11 +1,11 @@
-package uz.uzbekcard.taxiapp.presenter.impl
+package presenter.impl
 
 import cafe.adriel.voyager.core.model.ScreenModel
 import cafe.adriel.voyager.core.model.coroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
-import all.domain.usecase.ChatUserUsesCase
-import uz.uzbekcard.taxiapp.presenter.ChatUserPresenter
+import domain.usecase.ChatUserUsesCase
+import presenter.ChatUserPresenter
 import ui.intent.ChatUserIntent
 import ui.uistate.ChatUserUiState
 import util.direction.ChatUserDirection

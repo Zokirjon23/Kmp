@@ -1,4 +1,4 @@
-package all.domain.repository
+package domain.repository
 
 interface PassengerSettingRepository {
 }

@@ -18,7 +18,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -34,8 +33,8 @@ import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import org.jetbrains.compose.resources.painterResource
-import uz.uzbekcard.taxiapp.presenter.ChatUserPresenter
-import uz.uzbekcard.taxiapp.presenter.impl.ChatUserPresenterImpl
+import presenter.ChatUserPresenter
+import presenter.impl.ChatUserPresenterImpl
 import ui.intent.ChatUserIntent
 import ui.uistate.ChatUserUiState
 import util.component.BoxApp

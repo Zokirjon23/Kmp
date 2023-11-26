@@ -1,6 +1,6 @@
-package all.domain.usecase.impl
+package domain.usecase.impl
 
-import all.domain.usecase.DirectionUsesCase
+import domain.usecase.DirectionUsesCase
 
 class DirectionUsesCaseImpl() : DirectionUsesCase {
 }

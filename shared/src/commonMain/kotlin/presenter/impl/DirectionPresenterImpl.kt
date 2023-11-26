@@ -1,8 +1,8 @@
-package uz.uzbekcard.taxiapp.presenter.impl
+package presenter.impl
 
 import cafe.adriel.voyager.core.model.ScreenModel
 import kotlinx.coroutines.flow.MutableStateFlow
-import uz.uzbekcard.taxiapp.presenter.DirectionPresenter
+import presenter.DirectionPresenter
 import ui.intent.DirectionIntent
 import ui.uistate.DirectionUiState
 import util.direction.DriftDirection

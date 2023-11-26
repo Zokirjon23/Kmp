@@ -3,15 +3,14 @@ package ui.screen
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
-import uz.uzbekcard.taxiapp.presenter.PassengerSettingPresenter
-import uz.uzbekcard.taxiapp.presenter.impl.PassengerSettingPresenterPresenterImpl
+import presenter.PassengerSettingPresenter
+import presenter.impl.PassengerSettingPresenterPresenterImpl
 import ui.intent.PassagerSettingIntent
 import ui.uistate.PassengerSettingUiState
 

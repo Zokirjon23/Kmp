@@ -1,10 +1,9 @@
-package all.domain.repository.impl
+package domain.repository.impl
 
-import all.source.local.Storage
-import all.domain.repository.AuthRepository
+import domain.repository.AuthRepository
 import io.ktor.client.HttpClient
 
-class AuthRepositoryImpl(private val storage: Storage, private val api : HttpClient) :
+class AuthRepositoryImpl(private val api : HttpClient) :
     AuthRepository {
 
 }

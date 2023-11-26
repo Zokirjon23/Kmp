@@ -25,8 +25,8 @@ import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
-import uz.uzbekcard.taxiapp.presenter.DirectionPresenter
-import uz.uzbekcard.taxiapp.presenter.impl.DirectionPresenterImpl
+import presenter.DirectionPresenter
+import presenter.impl.DirectionPresenterImpl
 import ui.intent.DirectionIntent
 import ui.uistate.DirectionUiState
 import util.component.BoxApp

@@ -1,8 +1,8 @@
-package uz.uzbekcard.taxiapp.presenter.impl
+package presenter.impl
 
 import cafe.adriel.voyager.core.model.ScreenModel
 import cafe.adriel.voyager.core.model.coroutineScope
-import uz.uzbekcard.taxiapp.presenter.SplashViewModel
+import presenter.SplashViewModel
 import kotlinx.coroutines.launch
 import ui.intent.SplashIntent
 import util.direction.SplashDirection

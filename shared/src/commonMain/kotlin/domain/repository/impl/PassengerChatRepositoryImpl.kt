@@ -1,13 +1,12 @@
-package all.domain.repository.impl
+package domain.repository.impl
 
 import io.ktor.client.HttpClient
-import all.domain.repository.PassengerChatListRepository
-import all.domain.repository.PassengerChatRepository
-import all.domain.repository.PassengerMapRepository
-import all.domain.repository.PassengerSettingRepository
-import all.source.local.Storage
+import domain.repository.PassengerChatListRepository
+import domain.repository.PassengerChatRepository
+import domain.repository.PassengerMapRepository
+import domain.repository.PassengerSettingRepository
 
-class PassengerChatRepositoryImpl(private val storage: Storage, private val api: HttpClient) :
+class PassengerChatRepositoryImpl(private val api: HttpClient) :
     PassengerChatRepository, PassengerChatListRepository, PassengerMapRepository,
     PassengerSettingRepository {
 }

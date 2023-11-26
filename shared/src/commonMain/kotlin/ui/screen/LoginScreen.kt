@@ -31,8 +31,8 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.koin.getScreenModel
-import uz.uzbekcard.taxiapp.presenter.LoginViewModel
-import uz.uzbekcard.taxiapp.presenter.impl.LoginViewModelImpl
+import presenter.LoginViewModel
+import presenter.impl.LoginViewModelImpl
 import ui.intent.LoginIntent
 import ui.uistate.LoginUiState
 import util.AppScreen

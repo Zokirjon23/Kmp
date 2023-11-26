@@ -1,9 +1,9 @@
-package all.presenter.impl
+package presenter.impl
 
 import cafe.adriel.voyager.core.model.ScreenModel
 import kotlinx.coroutines.flow.MutableStateFlow
-import all.domain.usecase.ChatUsesCase
-import uz.uzbekcard.taxiapp.presenter.ChatPresenter
+import domain.usecase.ChatUsesCase
+import presenter.ChatPresenter
 import ui.intent.ChatIntent
 import ui.uistate.ChatUiState
 import util.direction.ChatDirection

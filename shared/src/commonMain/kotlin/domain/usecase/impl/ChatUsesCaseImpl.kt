@@ -1,7 +1,7 @@
-package all.domain.usecase.impl
+package domain.usecase.impl
 
-import all.domain.repository.PassengerChatRepository
-import all.domain.usecase.ChatUsesCase
+import domain.repository.PassengerChatRepository
+import domain.usecase.ChatUsesCase
 
 class ChatUsesCaseImpl(private val chatRepository: PassengerChatRepository) : ChatUsesCase {
 }

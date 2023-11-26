@@ -1,6 +1,6 @@
 package ui.screen
 
-import all.presenter.impl.ChatPresenterImpl
+import presenter.impl.ChatPresenterImpl
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -32,7 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.koin.getScreenModel
 import org.jetbrains.compose.resources.painterResource
-import uz.uzbekcard.taxiapp.presenter.ChatPresenter
+import presenter.ChatPresenter
 import ui.intent.ChatIntent
 import ui.uistate.ChatUiState
 import util.AppScreen

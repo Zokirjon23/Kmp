@@ -1,4 +1,4 @@
-package all.domain.usecase
+package domain.usecase
 
 interface PassengerSettingUsesCase {
 }

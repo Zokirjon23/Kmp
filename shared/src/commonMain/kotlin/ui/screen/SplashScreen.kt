@@ -6,8 +6,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.koin.getScreenModel
 import util.AppScreen
-import uz.uzbekcard.taxiapp.presenter.SplashViewModel
-import uz.uzbekcard.taxiapp.presenter.impl.SplashViewModelImpl
+import presenter.SplashViewModel
+import presenter.impl.SplashViewModelImpl
 import ui.intent.SplashIntent
 
 class SplashScreen : AppScreen {

@@ -1,9 +1,9 @@
-package uz.uzbekcard.taxiapp.presenter.impl
+package presenter.impl
 
 import cafe.adriel.voyager.core.model.ScreenModel
 import kotlinx.coroutines.flow.MutableStateFlow
-import all.domain.usecase.PassengerSettingUsesCase
-import uz.uzbekcard.taxiapp.presenter.PassengerSettingPresenter
+import domain.usecase.PassengerSettingUsesCase
+import presenter.PassengerSettingPresenter
 import ui.intent.PassagerSettingIntent
 import ui.uistate.PassengerSettingUiState
 

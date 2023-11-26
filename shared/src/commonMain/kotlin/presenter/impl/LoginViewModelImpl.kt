@@ -1,4 +1,4 @@
-package uz.uzbekcard.taxiapp.presenter.impl
+package presenter.impl
 
 import cafe.adriel.voyager.core.model.ScreenModel
 import cafe.adriel.voyager.core.model.coroutineScope
@@ -6,7 +6,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import uz.uzbekcard.taxiapp.presenter.LoginViewModel
+import presenter.LoginViewModel
 import uz.uzbekcard.taxiapp.source.model.Message
 import ui.intent.LoginIntent
 import ui.uistate.LoginUiState

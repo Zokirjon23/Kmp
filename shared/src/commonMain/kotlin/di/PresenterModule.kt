@@ -2,21 +2,21 @@ package di
 
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.bind
-import uz.uzbekcard.taxiapp.presenter.impl.SplashViewModelImpl
+import presenter.impl.SplashViewModelImpl
 import org.koin.dsl.module
-import uz.uzbekcard.taxiapp.presenter.ChatPresenter
-import uz.uzbekcard.taxiapp.presenter.ChatUserPresenter
-import uz.uzbekcard.taxiapp.presenter.DirectionPresenter
-import uz.uzbekcard.taxiapp.presenter.LoginViewModel
-import uz.uzbekcard.taxiapp.presenter.PassengerMapPresenter
-import uz.uzbekcard.taxiapp.presenter.PassengerSettingPresenter
-import uz.uzbekcard.taxiapp.presenter.SplashViewModel
-import all.presenter.impl.ChatPresenterImpl
-import uz.uzbekcard.taxiapp.presenter.impl.ChatUserPresenterImpl
-import uz.uzbekcard.taxiapp.presenter.impl.DirectionPresenterImpl
-import uz.uzbekcard.taxiapp.presenter.impl.LoginViewModelImpl
-import uz.uzbekcard.taxiapp.presenter.impl.PassengerMapPresenterImpl
-import uz.uzbekcard.taxiapp.presenter.impl.PassengerSettingPresenterPresenterImpl
+import presenter.ChatPresenter
+import presenter.ChatUserPresenter
+import presenter.DirectionPresenter
+import presenter.LoginViewModel
+import presenter.PassengerMapPresenter
+import presenter.PassengerSettingPresenter
+import presenter.SplashViewModel
+import presenter.impl.ChatPresenterImpl
+import presenter.impl.ChatUserPresenterImpl
+import presenter.impl.DirectionPresenterImpl
+import presenter.impl.LoginViewModelImpl
+import presenter.impl.PassengerMapPresenterImpl
+import presenter.impl.PassengerSettingPresenterPresenterImpl
 
 val presenterModule = module {
     /**

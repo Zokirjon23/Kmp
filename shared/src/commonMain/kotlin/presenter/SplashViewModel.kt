@@ -1,4 +1,4 @@
-package uz.uzbekcard.taxiapp.presenter
+package presenter
 
 import ui.intent.SplashIntent
 

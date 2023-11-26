@@ -1,4 +1,4 @@
-package uz.uzbekcard.taxiapp.presenter
+package presenter
 
 import kotlinx.coroutines.flow.StateFlow
 import ui.intent.PassagerMapIntent

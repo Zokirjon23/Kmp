@@ -1,7 +1,7 @@
-package all.domain.usecase.impl
+package domain.usecase.impl
 
-import all.domain.repository.PassengerMapRepository
-import all.domain.usecase.PassengerMapUsesCase
+import domain.repository.PassengerMapRepository
+import domain.usecase.PassengerMapUsesCase
 
 class PassengerMapUsesCaseImpl(private val mapRepository : PassengerMapRepository) :
     PassengerMapUsesCase {
