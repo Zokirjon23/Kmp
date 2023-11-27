@@ -32,22 +32,25 @@ import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
+import com.seiko.imageloader.rememberImagePainter
+import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import presenter.ChatUserPresenter
 import presenter.impl.ChatUserPresenterImpl
 import ui.intent.ChatUserIntent
 import ui.uistate.ChatUserUiState
+import util.color_primary
 import util.component.BoxApp
 import util.component.TextApp
 
 class ChatUserScreen : Tab {
 
+    @OptIn(ExperimentalResourceApi::class)
     override val options: TabOptions
         @Composable
         get() {
             val title = "Chat"
-            val icon =
-                rememberVectorPainter(ImageVector.vectorResource(id = R.drawable.ic_chat))
+            val icon = painterResource("")
 
             return remember {
                 TabOptions(
@@ -118,11 +121,7 @@ class ChatUserScreen : Tab {
 
                     LazyRow {
                         items(10) {
-                            val painter = rememberAsyncImagePainter(
-                                model = ImageRequest.Builder(LocalContext.current)
-                                    .data("https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.jpg")
-                                    .build()
-                            )
+                            val painter = rememberImagePainter("https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.jpg")
                             Column(modifier = Modifier.padding(start = 16.dp)) {
                                 Image(
                                     modifier = Modifier
@@ -174,11 +173,7 @@ class ChatUserScreen : Tab {
                                 .clickable { intent(ChatUserIntent.OpenChat()) }
                                 .padding(horizontal = 16.dp, vertical = 8.dp)
                         ) {
-                            val painter = rememberAsyncImagePainter(
-                                model = ImageRequest.Builder(LocalContext.current)
-                                    .data("https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.jpg")
-                                    .build()
-                            )
+                            val painter = rememberImagePainter("https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.jpg")
                             Image(
                                 modifier = Modifier
                                     .padding(end = 18.dp)
@@ -213,11 +208,11 @@ class ChatUserScreen : Tab {
                                     color = Color(0xFF878787),
 
                                     )
-                                Image(
-                                    painter = painterResource(id = R.drawable.ic_chat_done),
-                                    contentDescription = "image description",
-                                    Modifier.padding(top = 5.dp)
-                                )
+//                                Image(
+//                                    painter = painterResource(id = R.drawable.ic_chat_done),
+//                                    contentDescription = "image description",
+//                                    Modifier.padding(top = 5.dp)
+//                                )
                             }
                         }
                     }

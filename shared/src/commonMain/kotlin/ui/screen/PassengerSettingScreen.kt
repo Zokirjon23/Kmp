@@ -9,6 +9,8 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
+import org.jetbrains.compose.resources.ExperimentalResourceApi
+import org.jetbrains.compose.resources.painterResource
 import presenter.PassengerSettingPresenter
 import presenter.impl.PassengerSettingPresenterPresenterImpl
 import ui.intent.PassagerSettingIntent
@@ -16,11 +18,12 @@ import ui.uistate.PassengerSettingUiState
 
 class PassengerSettingScreen : Tab {
 
+    @OptIn(ExperimentalResourceApi::class)
     override val options: TabOptions
         @Composable
         get() {
             val title = "Setting"
-            val icon = rememberVectorPainter(ImageVector.vectorResource(id = R.drawable.ic_settings))
+            val icon = painterResource("")
 
             return remember {
                 TabOptions(

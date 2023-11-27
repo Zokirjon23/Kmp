@@ -1,13 +1,13 @@
 package presenter.impl
 
 import cafe.adriel.voyager.core.model.ScreenModel
-import cafe.adriel.voyager.core.model.coroutineScope
+import cafe.adriel.voyager.core.model.screenModelScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import presenter.LoginViewModel
-import uz.uzbekcard.taxiapp.source.model.Message
+import source.model.Message
 import ui.intent.LoginIntent
 import ui.uistate.LoginUiState
 
@@ -20,7 +20,7 @@ class LoginViewModelImpl : ScreenModel, LoginViewModel {
         when (intent) {
             is LoginIntent.Send -> {
                 uiState.update { it.copy(loading = true) }
-                coroutineScope.launch {
+                screenModelScope.launch {
                     delay(3000)
                     uiState.update { it.copy(loading = false,message = Message(text = "No Server")) }
                 }

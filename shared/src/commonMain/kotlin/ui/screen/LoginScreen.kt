@@ -36,13 +36,13 @@ import presenter.impl.LoginViewModelImpl
 import ui.intent.LoginIntent
 import ui.uistate.LoginUiState
 import util.AppScreen
-import uz.uzbekcard.taxiapp.util.component.TextFieldPhoneApp
-import uz.uzbekcard.taxiapp.util.component.BoxApp
-import uz.uzbekcard.taxiapp.util.component.ColumnApp
-import uz.uzbekcard.taxiapp.util.component.IconApp
-import uz.uzbekcard.taxiapp.util.component.TextApp
+import util.color_primary
+import util.component.BoxApp
+import util.component.TextApp
+import util.component.TextFieldPhoneApp
+import util.component.ColumnApp
 import util.component.ToolbarApp
-import uz.uzbekcard.taxiapp.util.extension.massageToText
+import util.text_color
 
 class LoginScreen : AppScreen {
 
@@ -73,7 +73,6 @@ class LoginScreen : AppScreen {
                             style = SpanStyle(
                                 fontSize = 32.sp,
                                 color = text_color,
-                                fontFamily = poppins_medium
                             )
                         ) {
                             append("Welcome \n")
@@ -82,7 +81,6 @@ class LoginScreen : AppScreen {
                             style = SpanStyle(
                                 fontSize = 32.sp,
                                 color = color_primary,
-                                fontFamily = poppins_medium
                             )
                         ) {
                             append("Login ")
@@ -91,7 +89,6 @@ class LoginScreen : AppScreen {
                             style = SpanStyle(
                                 fontSize = 32.sp,
                                 color = text_color,
-                                fontFamily = poppins_medium
                             )
                         ) {
                             append("Now !")
@@ -138,13 +135,13 @@ class LoginScreen : AppScreen {
                             color = Color(0xFFFFFFFF),
                             modifier = Modifier.align(Alignment.Center)
                         )
-                        IconApp(
-                            R.drawable.ic_arrow_left,
-                            tint = Color.White,
-                            modifier = Modifier
-                                .align(Alignment.CenterEnd)
-                                .padding(end = 12.dp)
-                        )
+//                        IconApp(
+//                            R.drawable.ic_arrow_left,
+//                            tint = Color.White,
+//                            modifier = Modifier
+//                                .align(Alignment.CenterEnd)
+//                                .padding(end = 12.dp)
+//                        )
                     } else {
                         CircularProgressIndicator(
                             modifier = Modifier
@@ -156,9 +153,9 @@ class LoginScreen : AppScreen {
             }
 
 
-            uiState.value.message?.let {
-                ToastError(text = it.massageToText()) { intent(LoginIntent.DismissError) }
-            }
+//            uiState.value.message?.let {
+//                ToastError(text = it.massageToText()) { intent(LoginIntent.DismissError) }
+//            }
         }
     }
 }

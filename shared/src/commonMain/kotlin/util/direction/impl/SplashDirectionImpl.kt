@@ -6,6 +6,6 @@ import util.navigation.Navigator
 
 class SplashDirectionImpl constructor(private val navigation : Navigator) : SplashDirection {
    override suspend fun openRegistrationScreen(){
-       navigation.navigateTo(LoginScreen())
+       navigation.replace(LoginScreen())
    }
 }

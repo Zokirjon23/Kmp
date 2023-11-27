@@ -31,15 +31,18 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.koin.getScreenModel
+import com.seiko.imageloader.rememberImagePainter
+import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import presenter.ChatPresenter
 import ui.intent.ChatIntent
 import ui.uistate.ChatUiState
 import util.AppScreen
-import uz.uzbekcard.taxiapp.util.component.AppBasicTextField
-import uz.uzbekcard.taxiapp.util.component.BoxApp
-import uz.uzbekcard.taxiapp.util.component.IconApp
-import uz.uzbekcard.taxiapp.util.component.TextApp
+import util.color_primary
+import util.component.AppBasicTextField
+import util.component.BoxApp
+import util.component.IconApp
+import util.component.TextApp
 
 class ChatScreen : AppScreen {
 
@@ -51,18 +54,15 @@ class ChatScreen : AppScreen {
         ChatScreenContent(uiState, viewModel::onEventDispatch)
     }
 
+    @OptIn(ExperimentalResourceApi::class)
     @Composable
     fun ChatScreenContent(uiState: State<ChatUiState>, intent: (ChatIntent) -> Unit) {
-        val avatar = rememberAsyncImagePainter(
-            model = ImageRequest.Builder(LocalContext.current)
-                .data("https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.jpg")
-                .build()
-        )
+        val painter = rememberImagePainter("https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.jpg")
         BoxApp(Modifier.background(color_primary)) {
             Column {
                 Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
                     IconButton(onClick = { }) {
-                        IconApp(id = R.drawable.ic_back, tint = Color.White)
+//                        IconApp(id = R.drawable.ic_back, tint = Color.White)
                     }
                     Image(
                         modifier = Modifier
@@ -71,7 +71,7 @@ class ChatScreen : AppScreen {
                             .width(55.dp)
                             .height(55.dp)
                             .background(color = Color(0xFF91F495), RoundedCornerShape(50)),
-                        painter = avatar,
+                        painter = painter,
                         contentDescription = null,
                     )
                     Column(Modifier.weight(0.5f)) {
@@ -93,7 +93,7 @@ class ChatScreen : AppScreen {
                         )
                     }
                     IconButton(onClick = { /*TODO*/ }) {
-                        IconApp(id = R.drawable.ic_phone, tint = Color.White)
+//                        IconApp(id = R.drawable.ic_phone, tint = Color.White)
                     }
                 }
 
@@ -112,7 +112,7 @@ class ChatScreen : AppScreen {
                             .clip(
                                 RoundedCornerShape(topEnd = 15.dp, topStart = 15.dp)
                             ),
-                        painter = painterResource(id = R.drawable.chat_background),
+                        painter = painterResource(""),
                         contentDescription = null, contentScale = ContentScale.Crop
                     )
                     Box(
@@ -140,10 +140,10 @@ class ChatScreen : AppScreen {
                             .padding(end = 10.dp)
                             .clip(RoundedCornerShape(50))
                             .align(Alignment.CenterEnd)) {
-                            IconApp(
-                                id = R.drawable.ic_send,
-                                tint = color_primary,
-                            )
+//                            IconApp(
+//                                id = R.drawable.ic_send,
+//                                tint = color_primary,
+//                            )
                         }
                     }
                 }

@@ -12,7 +12,7 @@ import domain.repository.PassengerMapRepository
 import domain.repository.PassengerSettingRepository
 import domain.repository.impl.PassengerChatRepositoryImpl
 
-val authRepositoryModule = module {
+val repositoryModule = module {
     singleOf(::AuthRepositoryImpl) bind (AuthRepository::class)
     singleOf(::PassengerChatRepositoryImpl) binds (arrayOf(
         PassengerChatRepository::class,

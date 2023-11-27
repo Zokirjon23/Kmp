@@ -25,10 +25,13 @@ import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.koin.getScreenModel
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
+import org.jetbrains.compose.resources.ExperimentalResourceApi
+import org.jetbrains.compose.resources.painterResource
 import presenter.DirectionPresenter
 import presenter.impl.DirectionPresenterImpl
 import ui.intent.DirectionIntent
 import ui.uistate.DirectionUiState
+import util.color_primary
 import util.component.BoxApp
 import util.component.IconApp
 import util.component.SpinnerApp
@@ -37,12 +40,13 @@ import util.component.ToolbarApp
 
 class DirectionScreen : Tab {
 
+    @OptIn(ExperimentalResourceApi::class)
     override val options: TabOptions
         @Composable
         get() {
             val title = "Direction"
-            val icon =
-                rememberVectorPainter(ImageVector.vectorResource(id = R.drawable.ic_direction))
+            val icon = painterResource("")
+
 
             return remember {
                 TabOptions(
@@ -69,7 +73,7 @@ class DirectionScreen : Tab {
         BoxApp(modifier = Modifier.fillMaxSize()) {
             ToolbarApp(title = "Yo'nalish tanlang", navigationIcon = {
                 IconButton(onClick = { /*TODO*/ }) {
-                    IconApp(id = R.drawable.ic_back, tint = Color.White)
+//                    IconApp(id = R.drawable.ic_back, tint = Color.White)
                 }
             })
             Card(

@@ -1,5 +1,6 @@
 package di
 
-import org.koin.dsl.module
-
-fun appModule() = listOf(navigationModule)
+fun appModule() = listOf(
+    navigationModule, useCaseModule, repositoryModule, presenterModule,
+    directionModule, networkModule
+)

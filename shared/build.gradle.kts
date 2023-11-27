@@ -2,6 +2,8 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.compose")
+    kotlin("plugin.serialization").version("1.9.20")
+//    id("dev.icerock.mobile.multiplatform-resources")
 }
 
 kotlin {
@@ -15,9 +17,15 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "shared"
             isStatic = true
+            export("dev.icerock.moko:resources:0.23.0")
+            export("dev.icerock.moko:graphics:0.9.0")
         }
     }
 
+    val coroutinesVersion = "1.7.3"
+    val ktorVersion = "2.3.5"
+    val sqlDelightVersion = "1.5.5"
+    val dateTimeVersion = "0.4.1"
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -46,6 +54,17 @@ kotlin {
                 api(libs.mvvm.flow)
                 api(libs.mvvm.flow.compose)
                 api(libs.precompose)
+
+
+                implementation(libs.coroutines.core)
+                implementation(libs.ktor.client.core)
+                implementation(libs.ktor.client.content.negotiation)
+                implementation(libs.ktor.serialization.kotlinx.json)
+                implementation(libs.runtime)
+
+                api(libs.image.loader)
+                api("io.github.qdsfdhvh:image-loader-extension-moko-resources:1.7.1")
+//                implementation("dev.icerock.moko:resources-compose:0.23.0")
             }
         }
         val androidMain by getting {
@@ -53,6 +72,7 @@ kotlin {
                 api(libs.compose.activity)
                 api(libs.androidx.appcompat)
                 api(libs.androidx.core)
+                implementation(libs.ktor.client.android)
             }
         }
         val iosX64Main by getting
@@ -63,15 +83,25 @@ kotlin {
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
+            dependencies {
+                implementation(libs.ktor.client.darwin)
+            }
         }
-
-//        val desktopMain by getting {
-//            dependencies {
-//                api(compose.preview)
-//            }
-//        }
     }
 }
+
+//dependencies {
+//    commonMainApi(libs.resources)
+//    commonMainApi(libs.resources.compose) // for compose multiplatform
+//    commonTestImplementation(libs.resources.test)
+//}
+
+//multiplatformResources {
+//    multiplatformResourcesPackage = "resource"
+//    multiplatformResourcesClassName = "R"
+//    multiplatformResourcesVisibility = dev.icerock.gradle.MRVisibility.Internal
+//    iosBaseLocalizationRegion = "en"
+//}
 
 android {
     compileSdk = (findProperty("android.compileSdk") as String).toInt()

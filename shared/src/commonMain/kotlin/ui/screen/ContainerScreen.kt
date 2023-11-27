@@ -16,6 +16,7 @@ import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabNavigator
 import util.AppScreen
+import util.text_color
 
 class ContainerScreen : AppScreen {
     @Composable
